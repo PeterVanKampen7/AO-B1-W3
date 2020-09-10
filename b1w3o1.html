@@ -1,0 +1,39 @@
+<!--
+Peter van Kampen
+Applicatie Ontwikkeling
+Pizza Calculator
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>B1W2O1 Pizza Calculator</title>
+</head>
+<body>
+  <script>
+  	const SMALLPRICE = 5;
+	const MEDIUMPRICE = 10;
+	const LARGEPRICE = 15;
+
+	alert("Hier kunt u pizzas bestellen, en u heeft keuze uit drie verschillende grotes; small, medium of large.");
+	
+	var smallPrompt = Number(prompt("Hoeveel kleine pizzas zou u willen bestellen? Deze kosten 5 euro per stuk."));
+	var smallTotal = smallPrompt * SMALLPRICE;
+
+	alert("Uw bestelling bestaat momemteel uit "+smallPrompt+" small pizza(s), met een totale koste van "+smallTotal+" euro.");
+
+	var mediumPrompt = Number(prompt("Hoeveel medium pizzas zou u willen bestellen? Deze kosten 10 euro per stuk."));
+	var mediumTotal = mediumPrompt * MEDIUMPRICE;
+
+	alert("Uw bestelling bestaat momemteel uit "+smallPrompt+" small pizza(s) ter waarde van "+smallTotal+" euro, en "+mediumPrompt+" medium pizza(s) ter waarde van "+mediumTotal+" euro, met een totale koste van "+(mediumTotal + smallTotal)+" euro.");
+
+	var largePrompt = Number(prompt("Hoeveel large pizzas zou u willen bestellen? Deze kosten 15 euro per stuk."));
+	var largeTotal = largePrompt * LARGEPRICE;
+
+	var finalTotal = largeTotal + mediumTotal + smallTotal;
+
+	alert("Uw bestelling is nu compleet. Uw bestelling bestaat uit "+smallPrompt+" small pizza(s) ter waarde van "+smallTotal+" euro, "+mediumPrompt+" medium pizza(s) ter waarde van "+mediumTotal+" euro, en "+largePrompt+" large pizza(s) ter waarde van "+largeTotal+" euro. Uw totaal komt uit op "+finalTotal+" euro");
+
+  </script>
+ </body>
+</html>
