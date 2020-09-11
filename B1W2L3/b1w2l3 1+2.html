@@ -10,13 +10,13 @@ Applicatie Ontwikkeling
 </head>
 <body>
   <script>
-  	var number = Number(prompt("Welke tafel moet het programma uitreken?"));
-    var iterations = Number(prompt("Hoe veel keer moet de tafel uitgerekend worden?"));
+  	var number = Number(prompt("Welke tafel moet het programma uitrekenen?")); //prompt de gebruiker naar de tafel die hij wilt hebben
+    var iterations = Number(prompt("Hoe veel keer moet de tafel uitgerekend worden?")); //prompt de gebruiker naar hoeveel keer hij de tafel uitgerekend wilt hebben
 
-    for (var i = 1; i <= iterator; i++) 
+    for (var i = 1; i <= iterations; i++) //for loop, start de iteratie op 1, niet op 0 want die is niet relevant want X * 0 is altijd 0. Zolang het iteratie nummer lager is of gelijk aan hoeveel keer de tafel gerekend moet worden gaat de loop door. Aan het einde van elke loop word de iterator met 1 verhoogd.
     {
-      document.write(i+" x "+number+" = "+i*number);
-      document.write("<br>")     
+      document.write(i+" x "+number+" = "+i*number);  //Een combinatie van een string en de bereking in een document.write.
+      document.write("<br>")     //newline
     }
   </script>
  </body>
