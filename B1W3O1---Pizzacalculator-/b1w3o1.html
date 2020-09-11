@@ -15,7 +15,7 @@ Pizza Calculator
 	const MEDIUMPRICE = 10;
 	const LARGEPRICE = 15;
 
-	alert("Hier kunt u pizzas bestellen, en u heeft keuze uit drie verschillende grotes; small, medium of large.");	//Een openings bericht dat kort het punt van de aplicatie uitlegt
+	alert("Hier kunt u pizzas bestellen, en u heeft keuze uit drie verschillende grotes; small, medium of large. Als uw bestelling een totaal heeft dat lager is dan 25 euro, wordt er bezorgkosten gerekend van 5 euro.");	//Een openings bericht dat kort het punt van de aplicatie uitlegt
 	
 	var smallPrompt = Number(prompt("Hoeveel kleine pizzas zou u willen bestellen? Deze kosten 5 euro per stuk."));	//Een prompt en variable voor het aantal kleine pizzas
 	var smallTotal = smallPrompt * SMALLPRICE;	//Bereking voor hoe veel geld alle bestelde kleine pizzas kosten
@@ -30,9 +30,23 @@ Pizza Calculator
 	var largePrompt = Number(prompt("Hoeveel large pizzas zou u willen bestellen? Deze kosten 15 euro per stuk."));	//Een prompt en variable voor het aantal large pizzas
 	var largeTotal = largePrompt * LARGEPRICE;	//Berekening voor hoeveel geld alle bestelde large pizzas kosten
 
-	var finalTotal = largeTotal + mediumTotal + smallTotal;	//Berekening voor hoeveel geld alle pizzas samen kosten
+	document.write("U heeft "+largePrompt+" large pizza(s) toegevoegd, ter waarde van "+largeTotal+" euro.<br>");	//Een bericht op het scherm dat aangeeft hoeveel large pizzas besteld zijn en hoeveel deze kosten. Dit bericht geeft ook de totaal prijs van de bestelling weer.
 
-	document.write("U heeft "+largePrompt+" large pizza(s) toegevoegd, ter waarde van "+largeTotal+" euro. <br> De totale kosten van uw bestelling bedraagd: "+finalTotal+" euro.");	//Een bericht op het scherm dat aangeeft hoeveel large pizzas besteld zijn en hoeveel deze kosten. Dit bericht geeft ook de totaal prijs van de bestelling weer.
+	var intermediateTotal = largeTotal + mediumTotal + smallTotal;	//Berekening voor hoeveel geld alle pizzas samen kosten
+	var finalTotal;
+
+	if(intermediateTotal < 25)	//Voorwaarde die kijkt of het bedrag op het moment lager is dan 25
+	{
+		document.write("Omdat uw bestelling minder kost dan 25 euro zijn er 5 euro bezorgkosten toegevoegd. <br>");	//Bericht dat de klant informeerd dat er kosten zijn toegevoegd.
+		finalTotal = intermediateTotal + 5;	//berekening die de kosten toevoegd.
+	}
+	else	//als het totaal meer is dan 25 gaat dit blok in effect
+	{
+		document.write("Omdat uw bestelling meer kost dan 25 euro zijn geen bezorgkosten toegevoegd. <br>");	//Bericht aan de klant informeerd dat er geen kosten zijn toegevoegd
+		finalTotal = intermediateTotal;	//Set de totaalprijs gelijk aan de eerdere prijs omdat er geen kosten zijn toegevoegd
+	}
+
+	document.write("De totale kosten van uw bestelling bedraagd: "+finalTotal+" euro.")	//Bericht met de totale kosten van de bestelling.
 
   </script>
  </body>
