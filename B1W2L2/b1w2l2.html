@@ -1,0 +1,30 @@
+<!--
+Peter van Kampen
+Applicatie Ontwikkeling
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>B1W2L2</title>
+</head>
+<body>
+  <script>
+  	const OPENINGTEXT = "In dit programma zal u gevraagd worden om uw voor- en achternaam en leeftijd in te vullen"; 
+  	//Een constante met de text voor de opening alert
+  	const FIRSTNAMEQUESTION = "Wat is je voornaam?"; //Een constante met een vraag over een voornaam, om later te gebruiken
+  	const LASTNAMEQUESTION = "Wat is je achternaam?"; //Een constante met een vraag over een achternaam, om later te gebruiken
+  	const AGEQUESTION = "Wat is je leeftijd?"; //Een constante met een vraag over een leeftijd, om later te gebruiken
+
+  	alert(OPENINGTEXT); //Een alert die de gebruiker informeert over het programme, met gebruik van de text in een eerder constate
+
+  	var firstName = prompt(FIRSTNAMEQUESTION); //Opvragen van de voornaam doormiddel van een prompt met gebruik van een eerder gemaakte constante
+  	var lastName = prompt(LASTNAMEQUESTION); //Opvragen van de achternaam doormiddel van een prompt met gebruik van een eerder gemaakte constante
+  	var age = prompt(AGEQUESTION); //Opvragen van de leeftijd doormiddel van een prompt met gebruik van een eerder gemaakte constante
+
+  	document.write("Je naam is "+firstName+" , je achternaam is "+lastName+" en je bent "+age+" jaar oud"); 
+  	//Uitgeven van de data in String formaat doormiddel van een document.write
+
+  </script>
+ </body>
+</html>
