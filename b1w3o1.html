@@ -15,24 +15,24 @@ Pizza Calculator
 	const MEDIUMPRICE = 10;
 	const LARGEPRICE = 15;
 
-	alert("Hier kunt u pizzas bestellen, en u heeft keuze uit drie verschillende grotes; small, medium of large.");
+	alert("Hier kunt u pizzas bestellen, en u heeft keuze uit drie verschillende grotes; small, medium of large.");	//Een openings bericht dat kort het punt van de aplicatie uitlegt
 	
-	var smallPrompt = Number(prompt("Hoeveel kleine pizzas zou u willen bestellen? Deze kosten 5 euro per stuk."));
-	var smallTotal = smallPrompt * SMALLPRICE;
+	var smallPrompt = Number(prompt("Hoeveel kleine pizzas zou u willen bestellen? Deze kosten 5 euro per stuk."));	//Een prompt en variable voor het aantal kleine pizzas
+	var smallTotal = smallPrompt * SMALLPRICE;	//Bereking voor hoe veel geld alle bestelde kleine pizzas kosten
 
-	alert("Uw bestelling bestaat momemteel uit "+smallPrompt+" small pizza(s), met een totale koste van "+smallTotal+" euro.");
+	document.write("U heeft "+smallPrompt+" small pizza(s) toegevoegd, ter waarde van "+smallTotal+" euro.<br>");	//Een bericht op het scherm dat aangeeft hoeveel kleine pizzas besteld zijn en hoeveel deze kosten
 
-	var mediumPrompt = Number(prompt("Hoeveel medium pizzas zou u willen bestellen? Deze kosten 10 euro per stuk."));
-	var mediumTotal = mediumPrompt * MEDIUMPRICE;
+	var mediumPrompt = Number(prompt("Hoeveel medium pizzas zou u willen bestellen? Deze kosten 10 euro per stuk."));	//Een prompt en variable voor het aantal medium pizzas
+	var mediumTotal = mediumPrompt * MEDIUMPRICE;	//Berekening voor hoeveel geld alle bestelde medium pizzas kosten
 
-	alert("Uw bestelling bestaat momemteel uit "+smallPrompt+" small pizza(s) ter waarde van "+smallTotal+" euro, en "+mediumPrompt+" medium pizza(s) ter waarde van "+mediumTotal+" euro, met een totale koste van "+(mediumTotal + smallTotal)+" euro.");
+	document.write(" U heeft "+mediumPrompt+" medium pizza(s) toegevoegd, ter waarde van "+mediumTotal+" euro. <br>");	//Een bericht op het scherm dat aangeeft hoeveel medium pizzas besteld zijn en hoeveel deze kosten
 
-	var largePrompt = Number(prompt("Hoeveel large pizzas zou u willen bestellen? Deze kosten 15 euro per stuk."));
-	var largeTotal = largePrompt * LARGEPRICE;
+	var largePrompt = Number(prompt("Hoeveel large pizzas zou u willen bestellen? Deze kosten 15 euro per stuk."));	//Een prompt en variable voor het aantal large pizzas
+	var largeTotal = largePrompt * LARGEPRICE;	//Berekening voor hoeveel geld alle bestelde large pizzas kosten
 
-	var finalTotal = largeTotal + mediumTotal + smallTotal;
+	var finalTotal = largeTotal + mediumTotal + smallTotal;	//Berekening voor hoeveel geld alle pizzas samen kosten
 
-	alert("Uw bestelling is nu compleet. Uw bestelling bestaat uit "+smallPrompt+" small pizza(s) ter waarde van "+smallTotal+" euro, "+mediumPrompt+" medium pizza(s) ter waarde van "+mediumTotal+" euro, en "+largePrompt+" large pizza(s) ter waarde van "+largeTotal+" euro. Uw totaal komt uit op "+finalTotal+" euro");
+	document.write("U heeft "+largePrompt+" large pizza(s) toegevoegd, ter waarde van "+largeTotal+" euro. <br> De totale kosten van uw bestelling bedraagd: "+finalTotal+" euro.");	//Een bericht op het scherm dat aangeeft hoeveel large pizzas besteld zijn en hoeveel deze kosten. Dit bericht geeft ook de totaal prijs van de bestelling weer.
 
   </script>
  </body>
